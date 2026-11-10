@@ -1,0 +1,11 @@
+{
+  "home_visible": true,
+  "sair_closes_activity": true,
+  "widget_scores": {
+    "quiz_score": "5",
+    "genius_score": "0",
+    "memo_score": "0"
+  },
+  "widget_visible": true,
+  "widget_opens_app": true
+}

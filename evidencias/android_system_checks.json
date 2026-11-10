@@ -1,0 +1,16 @@
+{
+  "original": {
+    "wifi": "1",
+    "mobile": "1",
+    "power": "0",
+    "battery": "Current Battery Service state:\n  AC powered: false\n  USB powered: false\n  Wireless powered: false\n  Dock powered: false\n  Max charging current: 0\n Time when the latest updated value of the Max charging current was sent via battery changed broadcast: +1m12s619ms\n  Max charging voltage: 0\n  Charge counter: 10000\n  status: 4\n  health: 2\n  present: true\n  level: 100\n  scale: 100\n  voltage: 5000\n Time when the latest updated value of the voltage was sent via battery changed broadcast: +1m12s619ms\n The last voltage value sent via the battery changed broadcast: 5000\n  temperature: 250\n  technology: Li-ion\n  Charging state: 0\n  Charging policy: 0\n  Capacity level: -1"
+  },
+  "results": {
+    "offline_start": true,
+    "power_save_start": true,
+    "battery_20_and_no_repeat_at_19": true,
+    "tilt_right_selects_true": true,
+    "tilt_left_selects_false": true,
+    "shake_reorders_cards": true
+  }
+}

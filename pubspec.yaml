@@ -1,0 +1,34 @@
+name: aprender_a1
+description: Aplicativo de treino Aprender+ para o modulo A1.
+publish_to: none
+version: 1.0.0+1
+environment:
+  sdk: '>=3.8.0 <4.0.0'
+dependencies:
+  flutter:
+    sdk: flutter
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  integration_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/data/
+    - assets/images/
+    - assets/images/animals/
+    - assets/images/cars/
+    - assets/audio/
+    - assets/audio/pt/
+    - assets/audio/en/
+    - assets/audio/es/
+  fonts:
+    - family: Montserrat
+      fonts:
+        - asset: assets/fonts/Montserrat-Regular.ttf
+        - asset: assets/fonts/Montserrat-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Montserrat-Black.ttf
+          weight: 900

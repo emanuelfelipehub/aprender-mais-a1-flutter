@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aprender+ — código explicado</title><style>
+*{box-sizing:border-box}body{margin:0;background:#fcfcfc;color:#1e0053;font:16px/1.6 system-ui,sans-serif}
+header{padding:24px 4vw;background:#1e0053;color:#fff}h1{font-size:26px;margin:0}header p{max-width:960px;margin:8px 0 0}
+main{max-width:1500px;margin:auto;padding:24px}label{display:block;font-weight:700}input,select,button{font:inherit}
+input,select{width:100%;padding:10px;border:1px solid #ac9cbf;border-radius:8px;background:#fff;color:#1e0053}
+.controls{display:grid;grid-template-columns:1fr 1fr;gap:20px}.layout{display:grid;grid-template-columns:55% 1fr;gap:24px;align-items:start}
+#lines{max-height:72vh;overflow:auto;background:#f4f0fa;border:1px solid #ddd3ec;border-radius:10px}
+.line{display:flex;width:100%;border:0;background:transparent;text-align:left;color:inherit;padding:4px 8px;gap:10px;cursor:pointer}
+.line:hover{background:#e9dfff}.line[aria-current=true]{background:#d9c8ff}
+.line span{flex:none;width:36px;color:#65577d;text-align:right;font:13px/1.8 ui-monospace,monospace}
+.line code{white-space:pre-wrap;overflow-wrap:anywhere;font:13px/1.8 ui-monospace,monospace}
+#detail{position:sticky;top:16px;max-height:76vh;overflow:auto}#selected{white-space:pre-wrap;overflow-wrap:anywhere;padding:14px;background:#f0e9ff;border-radius:8px}
+h2{font-size:19px}h3{font-size:17px}nav{display:flex;gap:10px}nav button{border:0;border-radius:8px;background:#3c00a7;color:white;padding:8px 14px;cursor:pointer}
+dt{font-weight:700;margin-top:12px;font-family:ui-monospace,monospace}dd{margin:0;color:#40334f}footer{margin-top:24px;border-top:1px solid #ddd3ec;padding-top:16px;color:#65577d}
+@media(max-width:850px){.controls,.layout{grid-template-columns:1fr}#lines{max-height:42vh}#detail{position:static;max-height:none}}
+</style></head><body><header><h1>Aprender+ — código explicado</h1>
+<p>Escolha um arquivo e selecione uma linha. Veja sua função e o significado das palavras técnicas e dos sinais. O guia usa o código real desta entrega e funciona offline.</p></header>
+<main><div class="controls"><label>Arquivo<select id="file"></select></label><label>Filtrar linhas<input id="search" type="search" placeholder="Ex.: score, await, setState"></label></div>
+<p id="purpose"></p><div class="layout"><section aria-label="Código"><div id="lines"></div><p id="empty" hidden>Nenhuma linha encontrada.</p></section>
+<section id="detail" aria-live="polite"><h2 id="heading"></h2><pre id="selected"></pre><p id="why"></p>
+<nav aria-label="Percorrer linhas"><button type="button" id="prev">Anterior</button><button type="button" id="next">Próxima</button></nav>
+<h3>Palavras e sinais desta linha</h3><dl id="terms"></dl></section></div>
+<footer>Use PASSO_A_PASSO.md para acompanhar o fluxo completo. Uma palavra sem definição específica é apresentada com sua declaração/origem, quando localizada, sem inventar significados. <span id="stats"></span></footer></main>
+<script type="application/json" id="data">__SOURCE_DATA__</script>
+<script>
+(function(){
+'use strict';
+const files=JSON.parse(document.getElementById('data').textContent);
+const select=document.getElementById('file'),search=document.getElementById('search'),lines=document.getElementById('lines');
+let current=0,row=1;
+files.forEach(function(f,i){const o=document.createElement('option');o.value=i;o.textContent=f.path+' ('+f.lines.length+' linhas)';select.appendChild(o)});
+function choose(n){
+ const f=files[current];row=Math.max(1,Math.min(n,f.lines.length));const l=f.lines[row-1];
+ document.getElementById('heading').textContent=f.path+' — linha '+row;
+ document.getElementById('selected').textContent=l.code||'(linha vazia)';document.getElementById('why').textContent=l.why;
+ const terms=document.getElementById('terms');terms.replaceChildren();
+ l.terms.forEach(function(pair){const dt=document.createElement('dt'),dd=document.createElement('dd');dt.textContent=pair[0];dd.textContent=pair[1];terms.append(dt,dd)});
+ lines.querySelectorAll('button').forEach(function(b){b.setAttribute('aria-current',String(Number(b.dataset.n)===row))});
+}
+function render(){
+ const f=files[current],query=search.value.toLowerCase();document.getElementById('purpose').textContent=f.purpose;lines.replaceChildren();let count=0;
+ f.lines.forEach(function(l){if(query&&!l.code.toLowerCase().includes(query))return;
+ const b=document.createElement('button'),n=document.createElement('span'),c=document.createElement('code');b.className='line';b.type='button';b.dataset.n=l.n;
+ b.setAttribute('aria-label','Linha '+l.n+': '+l.code);n.textContent=l.n;c.textContent=l.code||' ';b.append(n,c);b.addEventListener('click',function(){choose(l.n)});lines.appendChild(b);count++});
+ document.getElementById('empty').hidden=Boolean(count);choose(row);
+}
+select.addEventListener('change',function(){current=Number(select.value);row=1;search.value='';render()});
+search.addEventListener('input',render);document.getElementById('prev').addEventListener('click',function(){choose(row-1)});document.getElementById('next').addEventListener('click',function(){choose(row+1)});
+document.getElementById('stats').textContent=files.length+' arquivos, '+files.reduce(function(n,f){return n+f.lines.length},0)+' linhas.';
+render();
+})();
+</script></body></html>

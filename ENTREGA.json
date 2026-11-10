@@ -1,0 +1,14 @@
+{
+  "apk": "08_Modulo_A1_XX.apk",
+  "bytes": 50275171,
+  "sha256": "df14562efb05cd4251574894088ebf8c9fd1bc5483a3e26a07b062bdbf91970b",
+  "package": "br.com.aprendermais.aprender_a1",
+  "version": "1.0.0+1",
+  "min_sdk": 24,
+  "target_sdk": 36,
+  "unit_widget_tests": 22,
+  "android_integration_tests": 2,
+  "training": true,
+  "remote_submission": false,
+  "physical_headset_validation": false
+}

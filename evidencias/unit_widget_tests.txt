@@ -1,0 +1,24 @@
+00:00 +0: loading C:/Users/SENAI/Downloads/#08_Desenv_App_Moveis_Projeto Teste (1)/08_Modulo_A1_XX/test/game_logic_test.dart
+00:00 +0: C:/Users/SENAI/Downloads/#08_Desenv_App_Moveis_Projeto Teste (1)/08_Modulo_A1_XX/test/game_logic_test.dart: Quiz com JSON original carrega sete perguntas e os tres tipos
+00:00 +1: C:/Users/SENAI/Downloads/#08_Desenv_App_Moveis_Projeto Teste (1)/08_Modulo_A1_XX/test/game_logic_test.dart: Quiz com JSON original ME revela antes de avancar e nao duplica pontos
+00:00 +2: C:/Users/SENAI/Downloads/#08_Desenv_App_Moveis_Projeto Teste (1)/08_Modulo_A1_XX/test/game_logic_test.dart: Quiz com JSON original alternativa nova substitui a anterior
+00:00 +3: C:/Users/SENAI/Downloads/#08_Desenv_App_Moveis_Projeto Teste (1)/08_Modulo_A1_XX/test/game_logic_test.dart: Quiz com JSON original nao avanca sem responder e nao pontua erro
+00:00 +4: C:/Users/SENAI/Downloads/#08_Desenv_App_Moveis_Projeto Teste (1)/08_Modulo_A1_XX/test/game_logic_test.dart: Quiz com JSON original 501 tem correcao explicita e todos os indices sao validos
+00:00 +5: C:/Users/SENAI/Downloads/#08_Desenv_App_Moveis_Projeto Teste (1)/08_Modulo_A1_XX/test/game_logic_test.dart: Quiz com JSON original conceito nao aceita dois termos simultaneamente
+00:00 +6: C:/Users/SENAI/Downloads/#08_Desenv_App_Moveis_Projeto Teste (1)/08_Modulo_A1_XX/test/game_logic_test.dart: Quiz com JSON original todos os acertos somam exatamente os pesos: 39
+00:00 +7: C:/Users/SENAI/Downloads/#08_Desenv_App_Moveis_Projeto Teste (1)/08_Modulo_A1_XX/test/game_logic_test.dart: Quiz com JSON original VF avanca no primeiro toque e conta uma vez
+00:00 +8: C:/Users/SENAI/Downloads/#08_Desenv_App_Moveis_Projeto Teste (1)/08_Modulo_A1_XX/test/game_logic_test.dart: Genius nivel sobe a cada duas rodadas corretas
+00:00 +9: C:/Users/SENAI/Downloads/#08_Desenv_App_Moveis_Projeto Teste (1)/08_Modulo_A1_XX/test/game_logic_test.dart: Genius erro nao acrescenta score
+00:00 +10: C:/Users/SENAI/Downloads/#08_Desenv_App_Moveis_Projeto Teste (1)/08_Modulo_A1_XX/test/game_logic_test.dart: Genius geracao usa as cinco cores e reset limpa a partida
+00:00 +11: C:/Users/SENAI/Downloads/#08_Desenv_App_Moveis_Projeto Teste (1)/08_Modulo_A1_XX/test/game_logic_test.dart: MemoCheck oito cartas representam quatro pares, inicialmente visiveis
+00:00 +12: C:/Users/SENAI/Downloads/#08_Desenv_App_Moveis_Projeto Teste (1)/08_Modulo_A1_XX/test/game_logic_test.dart: MemoCheck mesma carta nao pode ser usada duas vezes
+00:00 +13: C:/Users/SENAI/Downloads/#08_Desenv_App_Moveis_Projeto Teste (1)/08_Modulo_A1_XX/test/game_logic_test.dart: MemoCheck par correto permanece aberto e so aumenta acertos
+00:00 +14: C:/Users/SENAI/Downloads/#08_Desenv_App_Moveis_Projeto Teste (1)/08_Modulo_A1_XX/test/game_logic_test.dart: MemoCheck erro bloqueia outros cliques ate esconder novamente
+00:00 +15: C:/Users/SENAI/Downloads/#08_Desenv_App_Moveis_Projeto Teste (1)/08_Modulo_A1_XX/test/game_logic_test.dart: MemoCheck embaralhar conserva pares, acertos e selecao
+00:00 +16: C:/Users/SENAI/Downloads/#08_Desenv_App_Moveis_Projeto Teste (1)/08_Modulo_A1_XX/test/game_logic_test.dart: MemoCheck termina ao acertar quatro pares e prepara nova partida limpa
+00:00 +17: C:/Users/SENAI/Downloads/#08_Desenv_App_Moveis_Projeto Teste (1)/08_Modulo_A1_XX/test/game_logic_test.dart: cronometro usa minutos e segundos com dois digitos
+00:00 +18: C:/Users/SENAI/Downloads/#08_Desenv_App_Moveis_Projeto Teste (1)/08_Modulo_A1_XX/test/widget_test.dart: Home abre menu, inicia quiz, revela ME e salva ao encerrar
+00:01 +19: C:/Users/SENAI/Downloads/#08_Desenv_App_Moveis_Projeto Teste (1)/08_Modulo_A1_XX/test/widget_test.dart: bateria baixa aparece apenas uma vez e os alertas sao enfileirados
+00:01 +20: C:/Users/SENAI/Downloads/#08_Desenv_App_Moveis_Projeto Teste (1)/08_Modulo_A1_XX/test/widget_test.dart: Genius Restart reinicia automaticamente e Stop interrompe
+00:01 +21: C:/Users/SENAI/Downloads/#08_Desenv_App_Moveis_Projeto Teste (1)/08_Modulo_A1_XX/test/widget_test.dart: MemoCheck conta tres segundos e Stop mostra resultado e zera
+00:01 +22: All tests passed!
